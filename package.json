@@ -1,12 +1,24 @@
 {
-  "name": "myproject",
+  "name": "angular",
   "repository": "https://github.com/Drag13/MyAng2",
   "license": "MIT",
   "version": "1.4.2",
+  
   "devDependencies": {
-    "typescript": "2.0.6",
-    "typings": "1.4.0"
+    "@types/core-js": "^0.9.34",
+    "@types/node": "^6.0.45",
+    "concurrently": "^3.0.0",
+    "lite-server": "^2.2.2",
+    "typescript": "^2.0.3",
+    "typings": "^1.4.0"
   },
+
+  "licenses": [
+      {
+        "type": "MIT",
+        "url": "https://github.com/angular/angular.io/blob/master/LICENSE"
+      }
+    ],
 
   "dependencies": {
     "@angular/common": "2.1.1",
@@ -33,6 +45,10 @@
     "cmd": "npm typescript",
     "getNpmVersion": "npm -v",
     "getNodeVersion": "node -v",
-    "updateNpm": "npm install npm@latest"
+    "updateNpm": "npm install npm@latest",
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "lite": "lite-server",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w"
   }
 }
